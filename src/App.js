@@ -1,11 +1,18 @@
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom';
+import Books from './Books';
 
-function App() {
-  return (
-    <div className="app">
-     
-    </div>
-  );
-}
+const App = () => {
+    return (
+        <Router>
+            <div>
+                <NavLink to='/books'>Books</NavLink>
+            </div>
+            <Switch>
+                <Route path='/books' component={Books} />
+            </Switch>
+        </Router>
+    );
+};
 
 export default App;
